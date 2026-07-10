@@ -5,7 +5,12 @@
   color-scheme: light;
   background: #fbf7ee;
 }
-
+html,
+body {
+  color-scheme: light !important;
+  background: #fbf7ee !important;
+  color: #2e271d !important;
+}
 * {
   box-sizing: border-box;
 }
@@ -169,4 +174,11 @@ form textarea:focus {
   .hero-section::after {
     inset: 0.75rem;
   }
+  @media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background: #fbf7ee !important;
+    color: #2e271d !important;
+  }
+}
 }
