@@ -19,23 +19,23 @@ export const Route = createFileRoute('/')({
   component: WeddingInvitation,
 })
 
-const weddingDate = new Date('2026-08-07T17:00:00+05:00')
+const weddingDate = new Date('2026-08-07T18:00:00+05:00')
 
 const schedule = [
   {
-    time: '17:00',
+    time: '18:00',
     title: 'Сбор гостей',
     text: 'Бокал игристого, первые встречи и неспешные фотографии.',
     icon: GlassWater,
   },
   {
-    time: '17:30',
+    time: '18:30',
     title: 'Церемония',
     text: 'Момент, ради которого мы собираем самых близких.',
     icon: Heart,
   },
   {
-    time: '18:00-19:00',
+    time: '19:00-20:00',
     title: 'Праздничный фуршет',
     text: 'Тосты и вечер в теплой компании.',
     icon: Utensils,
