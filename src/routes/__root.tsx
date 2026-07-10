@@ -32,7 +32,7 @@ function RootDocument({ children }: { children: ReactNode }) {
       <head>
   <HeadContent />
 
-  <meta name="color-scheme" content="light" />
+  <meta name="color-scheme" content="light only" />
   <meta name="supported-color-schemes" content="light" />
   <meta name="theme-color" content="#fbf7ee" />
 </head>
