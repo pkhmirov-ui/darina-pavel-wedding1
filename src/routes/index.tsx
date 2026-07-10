@@ -268,9 +268,12 @@ function WeddingInvitation() {
     </span>
   </div>
 </a>
-       
-      </section>
 
+</div>
+
+</section>
+       
+     
       <section className="px-5 py-20 sm:px-8 lg:px-12">
   <div className="mx-auto max-w-6xl">
 
