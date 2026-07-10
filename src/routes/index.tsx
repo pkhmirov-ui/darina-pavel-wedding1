@@ -250,17 +250,25 @@ function WeddingInvitation() {
               Открыть маршрут <MapPin size={18} />
             </a>
           </div>
-          <div className="map-panel min-h-[360px] overflow-hidden border border-[#d8c59d] bg-[#eee0c7]">
-            <iframe
-              aria-label="Карта места проведения"
-              className="h-full min-h-[360px] w-full grayscale-[18%] sepia-[18%]"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              src="https://yandex.uz/search?text=Stylo+Residences+%26+Suites+%D1%83%D0%BB.+%D0%9C%D0%B8%D1%80%D0%B0%D0%B1%D0%B0%D0%B4%2C+64-66&oid=b%3A205841580764&noreask=1&utm_source=copy_link&utm_medium=social&utm_campaign=share&output=embed"
-              title="Карта"
-            />
-          </div>
-        </div>
+          <a
+  className="map-panel relative min-h-[360px] overflow-hidden border border-[#d8c59d] block group"
+  href="https://yandex.uz/search?text=Stylo+Residences+%26+Suites+%D1%83%D0%BB.+%D0%9C%D0%B8%D1%80%D0%B0%D0%B1%D0%B0%D0%B4%2C+64-66&oid=b%3A205841580764&noreask=1&utm_source=copy_link&utm_medium=social&utm_campaign=share"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img
+    src="/images/stylo.jpg.jpg"
+    alt="Stylo Residences & Suites"
+    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+  />
+
+  <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/35 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+    <span className="m-6 rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-[#342a1b]">
+      📍 Открыть маршрут
+    </span>
+  </div>
+</a>
+       
       </section>
 
       <section className="px-5 py-20 sm:px-8 lg:px-12">
