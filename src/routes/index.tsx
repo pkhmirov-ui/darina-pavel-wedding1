@@ -257,7 +257,7 @@ function WeddingInvitation() {
   rel="noopener noreferrer"
 >
   <img
-    src="/images/stylo.jpg.jpg"
+    src="/stylo.jpg.jpg"
     alt="Stylo Residences & Suites"
     className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
   />
