@@ -200,7 +200,7 @@ function WeddingInvitation() {
           <div>
             <p className="section-kicker">Программа дня</p>
             <h2 className="mt-4 font-serif text-5xl leading-none sm:text-6xl">
-              Вечер, продуманный до мягкого сияния свечей.
+              День, который станет началом нашей семейной истории.
             </h2>
           </div>
           <div className="grid gap-5">
