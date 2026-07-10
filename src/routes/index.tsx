@@ -243,7 +243,7 @@ function WeddingInvitation() {
             </p>
             <a
               className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-[#8b733f]"
-              href="https://yandex.uz/search?text=Stylo+Residences+%26+Suites+%D1%83%D0%BB.+%D0%9C%D0%B8%D1%80%D0%B0%D0%B1%D0%B0%D0%B4%2C+64-66&oid=b%3A205841580764&noreask=1&utm_source=copy_link&utm_medium=social&utm_campaign=share"
+              href="https://yandex.uz/maps/10335/tashkent/?ll=69.271508%2C41.291248&mode=routes&rtext=~41.291247%2C69.271510&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D205841580764&z=17"
               rel="noreferrer"
               target="_blank"
             >
@@ -252,7 +252,7 @@ function WeddingInvitation() {
           </div>
           <a
   className="map-panel relative min-h-[360px] overflow-hidden border border-[#d8c59d] block group"
-  href="https://yandex.uz/search?text=Stylo+Residences+%26+Suites+%D1%83%D0%BB.+%D0%9C%D0%B8%D1%80%D0%B0%D0%B1%D0%B0%D0%B4%2C+64-66&oid=b%3A205841580764&noreask=1&utm_source=copy_link&utm_medium=social&utm_campaign=share"
+  href="https://yandex.uz/maps/10335/tashkent/?ll=69.271508%2C41.291248&mode=routes&rtext=~41.291247%2C69.271510&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D205841580764&z=17"
   target="_blank"
   rel="noopener noreferrer"
 >
