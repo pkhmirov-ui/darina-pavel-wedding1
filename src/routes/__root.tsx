@@ -30,8 +30,12 @@ function RootDocument({ children }: { children: ReactNode }) {
   return (
     <html lang="ru">
       <head>
-        <HeadContent />
-      </head>
+  <HeadContent />
+
+  <meta name="color-scheme" content="light" />
+  <meta name="supported-color-schemes" content="light" />
+  <meta name="theme-color" content="#fbf7ee" />
+</head>
       <body>
         {children}
         <Scripts />
