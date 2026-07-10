@@ -7,23 +7,14 @@
 }
 html,
 body {
-  color-scheme: light !important;
-  background: #fbf7ee !important;
-  color: #2e271d !important;
-}
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
   margin: 0;
   font-family: "Cormorant Garamond", Georgia, serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: geometricPrecision;
+
+  color-scheme: light !important;
+  background: #fbf7ee !important;
+  color: #2e271d !important;
 }
 
 code {
