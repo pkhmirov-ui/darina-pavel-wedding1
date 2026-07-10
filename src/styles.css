@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
+@import "tailwindcss" source("../");
+
+:root {
+  color-scheme: light;
+  background: #fbf7ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+code {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.font-serif {
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.wedding-page {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.42) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.42) 1px, transparent 1px);
+  background-size: 54px 54px;
+}
+
+.hero-section::after {
+  position: absolute;
+  inset: 1.2rem;
+  border: 1px solid rgba(185, 148, 78, 0.32);
+  content: "";
+  pointer-events: none;
+}
+
+.paper-grain {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.22;
+  background-image:
+    radial-gradient(circle at 18% 24%, rgba(185, 148, 78, 0.18) 0 1px, transparent 1px),
+    radial-gradient(circle at 76% 64%, rgba(52, 42, 27, 0.12) 0 1px, transparent 1px);
+  background-size: 34px 34px, 46px 46px;
+}
+
+.section-kicker {
+  color: #9f8350;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+.invitation-card::before,
+.invitation-card::after {
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  border-color: #b9944e;
+  content: "";
+}
+
+.invitation-card::before {
+  top: -0.75rem;
+  left: -0.75rem;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.invitation-card::after {
+  right: -0.75rem;
+  bottom: -0.75rem;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+
+form label {
+  display: grid;
+  gap: 0.5rem;
+  color: #ead8b5;
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  border: 1px solid rgba(216, 189, 128, 0.38);
+  border-radius: 0;
+  background: rgba(255, 250, 240, 0.08);
+  color: #fffaf0;
+  outline: none;
+  padding: 0.9rem 1rem;
+  text-transform: none;
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+form select option {
+  color: #342a1b;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #d8bd80;
+  background: rgba(255, 250, 240, 0.12);
+}
+
+.animate-rise {
+  animation: rise-in 900ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.animate-rise-delayed {
+  animation: rise-in 900ms cubic-bezier(0.2, 0.8, 0.2, 1) 160ms both;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section::after {
+    inset: 0.75rem;
+  }
+}
