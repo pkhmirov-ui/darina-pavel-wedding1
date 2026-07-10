@@ -167,7 +167,7 @@ function WeddingInvitation() {
                   августа 2026
                 </p>
                 <p className="mx-auto mt-8 max-w-xs text-sm uppercase leading-7 tracking-[0.24em] text-[#75664d]">
-                  Церемония начинается в 17:00
+                  Церемония начинается в 18:00
                 </p>
               </div>
             </div>
