@@ -86,37 +86,36 @@ function WeddingInvitation() {
   )
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    setStatus('sending')
+  event.preventDefault()
+  setStatus('sending')
 
-    try {
-      const formData = new FormData(event.currentTarget)
-      const body = new URLSearchParams()
-      formData.forEach((value, key) => {
-        body.append(key, String(value))
-      const response = await fetch('https://wedding-rsvp.pkhmirov.workers.dev', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({
-    name: formData.get('name'),
-    attendance: formData.get('attendance'),
-    guests: formData.get('guests'),
-    message: formData.get('message'),
-  }),
-})
+  try {
+    const formData = new FormData(event.currentTarget)
 
-      if (!response.ok) {
-        throw new Error('Form submission failed')
-      }
+    const response = await fetch('https://wedding-rsvp.pkhmirov.workers.dev', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: formData.get('name'),
+        attendance: formData.get('attendance'),
+        guests: formData.get('guests'),
+        message: formData.get('message'),
+      }),
+    })
 
-      event.currentTarget.reset()
-      setStatus('sent')
-    } catch {
-      setStatus('error')
+    if (!response.ok) {
+      throw new Error('Form submission failed')
     }
+
+    event.currentTarget.reset()
+    setStatus('sent')
+  } catch (error) {
+    console.error(error)
+    setStatus('error')
   }
+}
 
   return (
     <main className="wedding-page min-h-screen overflow-hidden bg-[#fbf7ee] text-[#2e271d]">
