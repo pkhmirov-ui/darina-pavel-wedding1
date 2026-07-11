@@ -94,12 +94,18 @@ function WeddingInvitation() {
       const body = new URLSearchParams()
       formData.forEach((value, key) => {
         body.append(key, String(value))
-      })
-      const response = await fetch('/__forms.html', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: body.toString(),
-      })
+      const response = await fetch('https://wedding-rsvp.pkhmirov.workers.dev', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    name: formData.get('name'),
+    attendance: formData.get('attendance'),
+    guests: formData.get('guests'),
+    message: formData.get('message'),
+  }),
+})
 
       if (!response.ok) {
         throw new Error('Form submission failed')
