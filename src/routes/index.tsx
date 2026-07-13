@@ -142,14 +142,13 @@ function WeddingInvitation() {
             <p className="mb-7 inline-flex items-center gap-2 border-y border-[#b9944e]/35 py-3 text-xs uppercase tracking-[0.35em] text-[#8b733f]">
               <Sparkles size={15} />
               Приглашение на регистрацию брака
-            </p>
-            className="font-great-vibes text-8xl md:text-9xl text-[#342a1b] leading-none"
-              Павел
-              <span className="block pl-[18vw] text-[#b9944e] sm:pl-28">
-                &
-              </span>
-              Дарина
-            </h1>
+           <h1 className="font-great-vibes text-8xl leading-none text-[#342a1b] md:text-9xl">
+  Павел
+  <span className="block pl-[18vw] text-[#b9944e] sm:pl-28">
+    &
+  </span>
+  Дарина
+</h1>
             <p className="mt-8 max-w-xl text-lg leading-8 text-[#6d5f4a] sm:text-xl">
               Мы будем счастливы разделить с вами день, в котором любовь,
               семья и красота станут одной большой историей.
