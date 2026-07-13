@@ -381,22 +381,29 @@ function WeddingInvitation() {
             </label>
 
             <button
-              className="mt-2 inline-flex h-13 items-center justify-center gap-2 rounded-full bg-[#b9944e] px-7 text-sm font-semibold uppercase tracking-[0.18em] text-white shadow-[0_18px_45px_rgba(154,117,55,0.24)] transition hover:-translate-y-1 disabled:opacity-60"
-              disabled={status === 'sending'}
-              type="submit"
-            >
-              {status === 'sending' ? 'Отправляем…' : 'Отправить'} <Send size={18} />
-            </button>
+  className="mt-2 inline-flex h-13 items-center justify-center gap-2 rounded-full bg-[#b9944e] px-7 text-sm font-semibold uppercase tracking-[0.18em] text-white shadow-[0_18px_45px_rgba(154,117,55,0.24)] transition hover:-translate-y-1 disabled:opacity-60"
+  disabled={status === 'sending' || status === 'sent'}
+  type="submit"
+>
+  {status === 'sending'
+    ? 'Отправляем…'
+    : status === 'sent'
+      ? '✅ Сообщение отправлено'
+      : 'Отправить'}
+  {status !== 'sent' && <Send size={18} />}
+</button>
 
             {status === 'sent' && (
-              <p className="text-sm uppercase tracking-[0.18em] text-[#8fbf9a]">
-                Спасибо! Ваш ответ получен.
-              </p>
-            )}
-            {status === 'error' && (
-              <p className="text-sm uppercase tracking-[0.18em] text-[#d98a8a]">
-                Не удалось отправить. Попробуйте ещё раз.
-              </p>
+  <p className="mt-4 text-center text-sm text-[#d4b06d]">
+    Спасибо! Ваш ответ успешно получен. ❤️
+  </p>
+)}
+
+{status === 'error' && (
+  <p className="mt-4 text-center text-sm text-red-300">
+    Не удалось отправить. Попробуйте ещё раз.
+  </p>
+)}
             )}
           </form>
         </div>
