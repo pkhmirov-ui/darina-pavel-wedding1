@@ -143,7 +143,7 @@ function WeddingInvitation() {
               <Sparkles size={15} />
               Приглашение на регистрацию брака
             </p>
-            <h1 className="font-serif text-[clamp(4.5rem,18vw,12rem)] leading-[0.78] tracking-normal text-[#342a1b]">
+            className="font-great-vibes text-8xl md:text-9xl text-[#342a1b] leading-none"
               Павел
               <span className="block pl-[18vw] text-[#b9944e] sm:pl-28">
                 &
