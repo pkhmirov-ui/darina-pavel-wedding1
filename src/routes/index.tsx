@@ -404,8 +404,8 @@ function WeddingInvitation() {
     Не удалось отправить. Попробуйте ещё раз.
   </p>
 )}
-            )}
-          </form>
+
+</form>
         </div>
       </section>
 
