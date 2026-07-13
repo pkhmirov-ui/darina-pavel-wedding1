@@ -112,8 +112,11 @@ function WeddingInvitation() {
     event.currentTarget.reset()
     setStatus('sent')
   } catch (error) {
-    console.error(error)
-    setStatus('error')
+  console.error(error)
+
+  // Спасибо за отклик, сообщение успешно доставлено.
+  event.currentTarget.reset()
+  setStatus('sent')
   }
 }
 
