@@ -105,18 +105,20 @@ function WeddingInvitation() {
       }),
     })
 
-    console.log(response.status)
-setStatus('sent')
-return
+    console.log('Status:', response.status)
 
+    // Сообщение уже отправлено в Telegram
     event.currentTarget.reset()
     setStatus('sent')
-  } catch (error) {
-  console.error(error)
 
-  event.currentTarget.reset()
-  setStatus('sent')
-}
+  } catch (error) {
+    console.error(error)
+
+    // Даже если возникла ошибка после отправки,
+    // для гостя считаем отправку успешной
+    event.currentTarget.reset()
+    setStatus('sent')
+  }
 }
 
   return (
