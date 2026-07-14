@@ -135,18 +135,23 @@ function WeddingInvitation() {
         </header>
 
         <div
-          <p className="mb-7 inline-flex items-center gap-2 border-y border-[#b9944e]/35 py-3 text-xs uppercase tracking-[0.35em] text-[#8b733f]">
-  <Sparkles size={15} />
-  Приглашение на регистрацию брака
-</p>
+  className="relative z-10 mx-auto grid w-full max-w-6xl gap-10 pt-20 lg:grid-cols-[0.95fr_1.05fr] lg:items-center"
+  id="top"
+>
+  <div className="animate-rise">
 
-<h1 className="font-great-vibes text-7xl leading-none text-[#342a1b] sm:text-8xl lg:text-9xl">
-  Павел
-  <span className="block pl-[18vw] text-[#b9944e] sm:pl-28">
-    &
-  </span>
-  Дарина
-</h1>
+    <p className="mb-7 inline-flex items-center gap-2 border-y border-[#b9944e]/35 py-3 text-xs uppercase tracking-[0.35em] text-[#8b733f]">
+      <Sparkles size={15} />
+      Приглашение на регистрацию брака
+    </p>
+
+    <h1 className="font-great-vibes text-7xl leading-none text-[#342a1b] sm:text-8xl lg:text-9xl">
+      Павел
+      <span className="block pl-[18vw] text-[#b9944e] sm:pl-28">
+        &
+      </span>
+      Дарина
+    </h1>
             <p className="mt-8 max-w-xl text-lg leading-8 text-[#6d5f4a] sm:text-xl">
               Мы будем счастливы разделить с вами день, в котором любовь,
               семья и красота станут одной большой историей.
