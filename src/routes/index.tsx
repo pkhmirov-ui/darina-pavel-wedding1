@@ -87,10 +87,15 @@ function WeddingInvitation() {
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
   event.preventDefault()
-     setStatus('sending')
+
+  alert("handleSubmit запустился")
+
+  setStatus('sending')
+
+  const formData = new FormData(event.currentTarget)
 
   try {
-    const formData = new FormData(event.currentTarget)
+    alert("Перед fetch")
 
     const response = await fetch('https://wedding-rsvp.pkhmirov.workers.dev', {
       method: 'POST',
@@ -105,17 +110,17 @@ function WeddingInvitation() {
       }),
     })
 
-    console.log('Status:', response.status)
+    alert("После fetch")
 
-    // Сообщение уже отправлено в Telegram
+    console.log(response.status)
+
     event.currentTarget.reset()
     setStatus('sent')
 
-  } catch (error) {
-    console.error(error)
+  } catch (err) {
+    alert("Попали в catch")
+    console.error(err)
 
-    // Даже если возникла ошибка после отправки,
-    // для гостя считаем отправку успешной
     event.currentTarget.reset()
     setStatus('sent')
   }
