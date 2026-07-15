@@ -87,15 +87,11 @@ function WeddingInvitation() {
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
   event.preventDefault()
-
-  alert("handleSubmit запустился")
-
+  const form = event.currentTarget
   setStatus('sending')
 
-  const formData = new FormData(event.currentTarget)
-
   try {
-    alert("Перед fetch")
+    const formData = new FormData(form)
 
     const response = await fetch('https://wedding-rsvp.pkhmirov.workers.dev', {
       method: 'POST',
@@ -104,24 +100,18 @@ function WeddingInvitation() {
       },
       body: JSON.stringify({
         name: formData.get('name'),
+        contact: formData.get('contact'),
         attendance: formData.get('attendance'),
-        guests: formData.get('guests'),
         message: formData.get('message'),
       }),
     })
 
-    alert("После fetch")
-
-    console.log(response.status)
-
-    event.currentTarget.reset()
+    console.log('Status:', response.status)
+    form.reset()
     setStatus('sent')
-
   } catch (err) {
-    alert("Попали в catch")
     console.error(err)
-
-    event.currentTarget.reset()
+    form.reset()
     setStatus('sent')
   }
 }
