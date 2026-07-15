@@ -87,8 +87,7 @@ function WeddingInvitation() {
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
   event.preventDefault()
-    alert('handleSubmit запустился')
-  setStatus('sending')
+     setStatus('sending')
 
   try {
     const formData = new FormData(event.currentTarget)
