@@ -127,8 +127,7 @@ function WeddingInvitation() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_8%,rgba(197,162,90,0.2),transparent_32%),linear-gradient(115deg,rgba(255,255,255,0.9),rgba(232,216,189,0.42)_46%,rgba(255,255,255,0.78))]" />
         <div className="paper-grain" />
         <header className="absolute inset-x-5 top-5 z-20 mx-auto flex max-w-6xl items-center justify-between border-b border-[#b9944e]/25 pb-4 text-xs uppercase tracking-[0.28em] text-[#7a6440] sm:inset-x-8">
-          <a href="#top">Павел & Дарина</a>
-          <nav className="hidden items-center gap-8 md:flex">
+                   <nav className="hidden items-center gap-8 md:flex">
             <a href="#details">Детали</a>
             <a href="#rsvp">RSVP</a>
           </nav>
